@@ -1,0 +1,2 @@
+
+:link_jide: link:http://www.jidesoft.com/products/oss.htm[JIDE Common Layer, window="_blank"]

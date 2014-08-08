@@ -1,0 +1,118 @@
+
+[[_modules]]
+= Modules
+:subproject-base: {rootdir}/subprojects/griffon-jide-
+:java-source: /src/main/java/
+:groovy-source: /src/main/groovy/
+:package-base: org/codehaus/griffon/runtime/
+:numbered:
+
+The following sections display all bindings per module. Use this information to
+successfully override a binding on your own modules or to troubleshoot a module
+binding if the wrong type has been applied by the Griffon runtime.
+
+== Swing
+
+Module name: +jide-swing-groovy+
+
+Depends on: +swing-groovy+
+
+[source,java,options="nowrap"]
+----
+include::{subproject-base}swing-groovy{groovy-source}{package-base}swing/jide/JideSwingGroovyModule.java[tags=bindings,indent=0]
+----
+
+The following nodes will become available on a Groovy View
+
+[cols="2*",options="header"]
+|===
+| Node                       | Type
+| animator                   | +com.jidesoft.swing.Animator+
+| autoCompletion             | +javax.swing.JComponent+
+| autoCompletionComboBox     | +com.jidesoft.swing.AutoCompletionComboBox+
+| autoResizingTextArea       | +com.jidesoft.swing.AutoResizingTextArea+
+| bannerPanel                | +com.jidesoft.dialog.BannerPanel+
+| bottom                     | +javax.swing.JPanel+
+| buttonPanel                | +com.jidesoft.dialog.ButtonPanel+
+| calculator                 | +com.jidesoft.swing.Calculator+
+| center                     | +javax.swing.JPanel+
+| checkBoxList               | +com.jidesoft.swing.CheckBoxList+
+| checkBoxListWithSelectable | +com.jidesoft.swing.CheckBoxListWithSelectable+
+| checkBoxTree               | +com.jidesoft.swing.CheckBoxTree+
+| clickThroughLabel          | +com.jidesoft.swing.ClickThroughLabel+
+| clickThroughStyledLabel    | +com.jidesoft.swing.ClickThroughStyledLabel+
+| comboBoxSearchable         | +javax.swing.JComboBox+
+| contentContainer           | +com.jidesoft.swing.ContentContainer+
+| dateSpinner                | +com.jidesoft.spinner.DateSpinner+
+| dialogBannerPanel          | +griffon.plugins.jide.swing.support.DialogBannerPanel+
+| dialogButtonPanel          | +griffon.plugins.jide.swing.support.DialogButtonPanel+
+| dialogContentPanel         | +griffon.plugins.jide.swing.support.DialogContentPanel+
+| dialogPage                 | +griffon.builder.jide.impl.DefaultDialogPage+
+| fileIntelliHints           | +com.jidesoft.hints.FileIntelliHints+
+| folderChooser              | +com.jidesoft.swing.FolderChooser+
+| gripper                    | +com.jidesoft.swing.Gripper+
+| headerBox                  | +com.jidesoft.swing.HeaderBox+
+| infiniteProgressPanel      | +com.jidesoft.swing.InfiniteProgressPanel+
+| jideBorderLayout           | +com.jidesoft.swing.JideBorderLayout+
+| jideBoxLayout              | +com.jidesoft.swing.JideBoxLayout+
+| jideButton                 | +com.jidesoft.swing.JideButton+
+| jideMenu                   | +com.jidesoft.swing.JideMenu+
+| jideOptionPane             | +com.jidesoft.dialog.JideOptionPane+
+| jidePopup                  | +com.jidesoft.popup.JidePopup+
+| jidePopupMenu              | +com.jidesoft.swing.JidePopupMenu+
+| jideScrollPane             | +com.jidesoft.swing.JideScrollPane+
+| jideSplitButton            | +com.jidesoft.swing.JideSplitButton+
+| jideSplitPane              | +com.jidesoft.swing.JideSplitPane+
+| jideSvgIcon                | +griffon.plugins.jide.swing.support.ResizableSVGIcon+
+| jideTabbedPane             | +com.jidesoft.swing.JideTabbedPane+
+| jideToggleButton           | +com.jidesoft.swing.JideToggleButton+
+| jideToggleSplitButton      | +com.jidesoft.swing.JideToggleSplitButton+
+| labeledTextField           | +com.jidesoft.swing.LabeledTextField+
+| left                       | +javax.swing.JPanel+
+| listDataIntelliHints       | +com.jidesoft.hints.ListDataIntelliHints+
+| listSearchable             | +javax.swing.JList+
+| meterProgressBar           | +com.jidesoft.swing.MeterProgressBar+
+| multilineLabel             | +com.jidesoft.swing.MultilineLabel+
+| multilineToggleButton      | +com.jidesoft.swing.MultilineToggleButton+
+| multiplePageDialog         | +com.jidesoft.dialog.MultiplePageDialog+
+| multiplePageDialogPane     | +com.jidesoft.dialog.MultiplePageDialogPane+
+| nullButton                 | +com.jidesoft.swing.NullButton+
+| nullCheckBox               | +com.jidesoft.swing.NullCheckBox+
+| nullJideButton             | +com.jidesoft.swing.NullJideButton+
+| nullLabel                  | +com.jidesoft.swing.NullLabel+
+| nullPanel                  | +com.jidesoft.swing.NullPanel+
+| nullRadioButton            | +com.jidesoft.swing.NullRadioButton+
+| nullTristateCheckBox       | +com.jidesoft.swing.NullTristateCheckBox+
+| overlayCheckBox            | +com.jidesoft.swing.OverlayCheckBox+
+| overlayComboBox            | +com.jidesoft.swing.OverlayComboBox+
+| overlayRadioButton         | +com.jidesoft.swing.OverlayRadioButton+
+| overlayTextArea            | +com.jidesoft.swing.OverlayTextArea+
+| overlayTextField           | +com.jidesoft.swing.OverlayTextField+
+| paintPanel                 | +com.jidesoft.swing.PaintPanel+
+| partialEtchedBorder        | +com.jidesoft.swing.PartialEtchedBorder+
+| partialGradientLineBorder  | +com.jidesoft.swing.PartialGradientLineBorder+
+| partialLineBorder          | +com.jidesoft.swing.PartialLineBorder+
+| partialLoweredEtchedBorder | +com.jidesoft.swing.PartialEtchedBorder+
+| partialRaisedEtchedBorder  | +com.jidesoft.swing.PartialEtchedBorder+
+| pointSpinner               | +com.jidesoft.spinner.PointSpinner+
+| rangeSlider                | +com.jidesoft.swing.RangeSlider+
+| resizableDialog            | +com.jidesoft.swing.ResizableDialog+
+| resizableFrame             | +com.jidesoft.swing.ResizableFrame+
+| resizablePanel             | +com.jidesoft.swing.ResizablePanel+
+| resizableWindow            | +com.jidesoft.swing.ResizableWindow+
+| right                      | +javax.swing.JPanel+
+| scrollableButtonPanel      | +com.jidesoft.dialog.ScrollableButtonPanel+
+| searchableBar              | +griffon.plugins.jide.swing.support.SearchableBarWrapper+
+| simpleScrollPane           | +com.jidesoft.swing.SimpleScrollPane+
+| splitButtonGroup           | +com.jidesoft.swing.SplitButtonGroup+
+| standardDialog             | +griffon.plugins.jide.swing.support.DefaultStandardDialog+
+| styledLabel                | +com.jidesoft.swing.StyledLabel+
+| tableSearchable            | +javax.swing.JTable+
+| textComponentSearchable    | +javax.swing.text.JTextComponent+
+| titledSeparator            | +com.jidesoft.swing.TitledSeparator+
+| top                        | +javax.swing.JPanel+
+| treeSearchable             | +javax.swing.JTree+
+| tristateCheckBox           | +com.jidesoft.swing.TristateCheckBox+
+
+|===
+

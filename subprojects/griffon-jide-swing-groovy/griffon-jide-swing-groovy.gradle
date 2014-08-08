@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+apply from: rootProject.file('gradle/code-coverage.gradle')
+
+tasks.withType(JavaCompile) {
+    sourceCompatibility = '1.7'
+    targetCompatibility = '1.7'
+}
+
+dependencies {
+    compileOnly "org.codehaus.griffon:griffon-core-compile:${griffonVersion}"
+
+    compile project(':griffon-jide-swing')
+    compile('org.codehaus.griffon:jidebuilder:6.0') {
+        exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+        exclude group: 'org.jidesoft',        module: 'jide-oss'
+        exclude group: 'com.kitfox.svg',      module: 'svg-salamander'
+    }
+
+    compile "org.codehaus.griffon:griffon-swing-groovy:${griffonVersion}"
+
+    testCompile "org.codehaus.griffon:griffon-core-test:$griffonVersion"
+
+    testRuntime "org.codehaus.griffon:griffon-guice:$griffonVersion"
+    testRuntime "org.codehaus.griffon:griffon-groovy:${griffonVersion}"
+    testRuntime 'org.slf4j:slf4j-simple:1.7.7'
+}

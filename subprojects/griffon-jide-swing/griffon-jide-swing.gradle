@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+
+apply from: rootProject.file('gradle/code-coverage.gradle')
+apply from: rootProject.file('gradle/javafx.gradle')
+
+tasks.withType(JavaCompile) {
+    sourceCompatibility = '1.7'
+    targetCompatibility = '1.7'
+}
+
+dependencies {
+    compileOnly project.files(project.jfxrtLocation)
+
+    compile "com.jidesoft:jide-oss:$jideVersion"
+    compile 'com.kitfox.svg:svg-salamander:1.0'
+    compile "org.codehaus.griffon:griffon-core:${griffonVersion}"
+
+    testRuntime "org.codehaus.griffon:griffon-guice:${griffonVersion}"
+    testRuntime "org.codehaus.griffon:griffon-groovy:${griffonVersion}"
+}
+
+compileGroovy.enabled = false
