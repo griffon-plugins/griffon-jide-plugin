@@ -1,0 +1,3 @@
+griffon.builder.swing.jide
+griffon.plugins.jide.swing.support
+org.codehaus.griffon.runtime.swing.jide
