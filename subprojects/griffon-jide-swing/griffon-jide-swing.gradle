@@ -1,7 +1,6 @@
 apply plugin: 'groovy'
 
-apply from: rootProject.file('gradle/code-coverage.gradle')
-apply from: rootProject.file('gradle/javafx.gradle')
+// apply from: rootProject.file('gradle/code-coverage.gradle')
 
 tasks.withType(JavaCompile) {
     sourceCompatibility = '1.7'
@@ -9,8 +8,6 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    compileOnly project.files(project.jfxrtLocation)
-
     compile "com.jidesoft:jide-oss:$jideVersion"
     compile 'com.kitfox.svg:svg-salamander:1.0'
     compile "org.codehaus.griffon:griffon-core:${griffonVersion}"
